@@ -13,7 +13,7 @@
   gtag('config', 'G-WG4L0SGNJJ');
   var params = new URLSearchParams(window.location.search);
   var source = (params.get('s') || 'direct').replace(/[^a-z0-9_]/gi, '').slice(0, 30);
-  var dest = '../?s=' + encodeURIComponent(source);
+  var dest = '../?src=' + encodeURIComponent(source);
   var moved = false;
   function go() { if (!moved) { moved = true; window.location.replace(dest); } }
   gtag('event', 'go_relay', {

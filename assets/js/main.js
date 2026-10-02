@@ -13,7 +13,7 @@
   var q = new URLSearchParams(location.search);
   var src = "lp";
   if (q.get("utm_source")) src += "_" + q.get("utm_source") + (q.get("utm_content") ? "_" + q.get("utm_content") : "");
-  else if (q.get("s")) src += "_" + q.get("s");
+  else if (q.get("src") || q.get("s")) src += "_" + (q.get("src") || q.get("s"));
   src = src.replace(/[^a-z0-9_]/gi, "").slice(0, 40);
   document.querySelectorAll(".js-cta").forEach(function (a) {
     if (closed) {
