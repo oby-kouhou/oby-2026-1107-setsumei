@@ -298,7 +298,7 @@ main,.ft{position:relative;z-index:1}
   .tab{font-size:16px}
   .chapter__h{top:3px}
   .close__photo{height:82vh;max-height:820px}
-  .close__photo img{object-position:62% 50%}
+  .close__photo img{top:0;height:100%;object-position:62% 86%}
 }
 
 /* 動きを減らす設定 */
