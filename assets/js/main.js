@@ -27,8 +27,15 @@
       return;
     }
     a.setAttribute("href", "apply/?s=" + encodeURIComponent(src));
-    a.addEventListener("click", function () {
-      if (typeof gtag === "function") gtag("event", "cta_click", { cta_location: a.getAttribute("data-cta-location") });
+    a.addEventListener("click", function (e) {
+      if (typeof gtag !== "function") return;
+      /* 送信を待ってから移動する（すぐ移動すると cta_click が送られないことがある）。最大0.4秒 */
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) { gtag("event", "cta_click", { cta_location: a.getAttribute("data-cta-location"), source: src }); return; }
+      e.preventDefault();
+      var href = a.getAttribute("href"), done = false;
+      function go() { if (!done) { done = true; location.href = href; } }
+      gtag("event", "cta_click", { cta_location: a.getAttribute("data-cta-location"), source: src, transport_type: "beacon", event_callback: go });
+      setTimeout(go, 400);
     });
   });
   if (closed) document.querySelectorAll(".hero__dl").forEach(function (p) { p.textContent = "お申し込みの受付は終了しました"; });
