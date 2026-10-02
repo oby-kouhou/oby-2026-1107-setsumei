@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>申込ページへ移動中... | 小林聖心女子学院小学校</title>
+<meta name="robots" content="noindex">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WG4L0SGNJJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WG4L0SGNJJ');
+  const urlParams = new URLSearchParams(window.location.search);
+  const source = urlParams.get('s') || 'direct';
+  gtag('event', 'click_apply', {
+    'event_category': 'outbound',
+    'event_label': 'mirai_compass',
+    'source': source,
+    'event_name_jp': 'setsumei_1107'
+  });
+  setTimeout(function() {
+    window.location.href = 'https://mirai-compass.net/usr/obyshjge/event/evtIndex.jsf';
+  }, 800);
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif;
+  background: #faf6f0; color: #333; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; min-height: 100vh; margin: 0;
+  padding: 20px; text-align: center; }
+.container { max-width: 400px; }
+h1 { font-size: 1.2em; font-weight: normal; color: #2d3e50; margin-bottom: 1.5em; letter-spacing: 0.05em; }
+.spinner { border: 3px solid #f0e8dc; border-top: 3px solid #2d3e50; border-radius: 50%;
+  width: 36px; height: 36px; animation: spin 1s linear infinite; margin: 0 auto 1.5em; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.message { font-size: 0.9em; color: #666; line-height: 1.6; }
+.fallback { margin-top: 2em; font-size: 0.85em; }
+.fallback a { color: #2d3e50; text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="spinner"></div>
+  <h1>申込ページへ移動しています</h1>
+  <p class="message">ミライコンパスの申込ページへ<br>自動的に移動します。</p>
+  <p class="fallback">自動で移動しない場合は<br><a href="https://mirai-compass.net/usr/obyshjge/event/evtIndex.jsf">こちらをタップ</a></p>
+</div>
+</body>
+</html>
