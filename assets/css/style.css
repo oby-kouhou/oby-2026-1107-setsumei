@@ -138,7 +138,7 @@ main,.ft{position:relative;z-index:1}
 .byi{background:#fff;border-radius:18px;padding:26px 22px 18px;margin:0 0 22px;display:flex;align-items:baseline;flex-wrap:wrap;gap:.08em .22em;line-height:1;box-shadow:0 18px 40px -30px rgba(120,60,80,.5)}
 .byi span{font-family:var(--num);font-weight:900;color:var(--ink)}
 .byi__big{font-size:clamp(34px,9vw,56px)}
-.byi__you{font-size:clamp(64px,19vw,128px);color:var(--accent)!important;letter-spacing:-.02em}
+.byi__you{font-size:clamp(34px,9vw,56px);color:var(--accent)!important;letter-spacing:-.02em}
 .byi__small{font-family:var(--en)!important;font-style:italic;font-weight:500!important;font-size:clamp(20px,5vw,30px);color:var(--muted)!important}
 .byi__i{font-family:var(--en)!important;font-style:italic;font-weight:500!important;font-size:clamp(20px,5vw,30px);color:var(--muted)!important}
 .byi figcaption{flex-basis:100%;font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.06em;line-height:1.6}
