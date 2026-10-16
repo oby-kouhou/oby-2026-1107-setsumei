@@ -5,8 +5,8 @@
   var root = document.documentElement;
   root.classList.add(reduced ? "no-motion" : "motion");
 
-  /* 申込締切（2026/11/6 9:00 JST）を過ぎたら、ボタンを「受付は終了しました」に切り替える */
-  var DEADLINE = Date.parse("2026-11-06T09:00:00+09:00");
+  /* 申込締切（2026/11/6 23:59 JST）を過ぎたら、ボタンを「受付は終了しました」に切り替える */
+  var DEADLINE = Date.parse("2026-11-06T23:59:59+09:00");
   var closed = Date.now() >= DEADLINE;
 
   /* 申込ボタン：apply 中継（click_apply を記録してミライコンパスへ）。go 中継や広告から来た人は、その出どころを s に足して区別する */

@@ -5,5 +5,5 @@
 - apply中継（LPの申込ボタン）: `.../apply/?s=lp_{source}` → ミライコンパス申込一覧。GA4 イベント `click_apply`（source、event_name_jp `setsumei_1107`）
 - LP内の申込ボタン: GA4 イベント `cta_click`（cta_location: header / hero / outline / final / sticky）
 - 広告からは LP に UTM を付けて誘導（`?utm_source=ig&utm_medium=paid&utm_campaign=1107_setsumei&utm_content=a|b`）。申込時の source は `lp_ig_a` などになる
-- 申込締切 2026/11/6 9:00 を過ぎると、LP のボタンは自動で「受付は終了しました」に切り替わる
+- 申込締切 2026/11/6 23:59 を過ぎると、LP のボタンは自動で「受付は終了しました」に切り替わる
 - GA4: G-WG4L0SGNJJ（プロパティ 533276091）
